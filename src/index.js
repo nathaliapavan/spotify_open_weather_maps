@@ -19,6 +19,10 @@ const city = viaCepService.getCity(18680590)
 
 const app = express();
 
+app.get('/', function(req, res) {
+    res.sendFile('index.html', { root: __dirname });
+});
+
 app.listen(3333, () => {
     console.log('🚀 spotifyOpenWeatherMaps Started!');
 });
